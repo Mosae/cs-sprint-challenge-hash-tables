@@ -12,6 +12,8 @@ def has_negatives(a):
     for i in range(len(a)):
         #print(a[i])
         #if num is > 0 store it in set
+        if a[i] == None:
+            return
         if a[i] > 0:
             pairs.add(a[i])
             #print(pairs)
@@ -22,13 +24,12 @@ def has_negatives(a):
             #then if that - value is in set
             if(-a[i]) in pairs:
                 #we return the pair
-                #print("{}, {}".format(a[i], -a[i]))
+                print("{}, {}".format(a[i], -a[i]))
 
 
 
 
-
-    return result
+    return pairs
 
 
 if __name__ == "__main__":
